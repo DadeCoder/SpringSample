@@ -1,4 +1,4 @@
-package com.dade.spring;
+package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by Dade on 2017/5/9.
+ * Created by Dade on 2017/5/13.
  */
 @RestController
 public class TestRunController {

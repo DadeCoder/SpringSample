@@ -24,11 +24,13 @@
         <processorPath useClasspath="true" />
         <module name="SpringBootDemo" />
         <module name="SpringSession" />
+        <module name="SpringSessionTest" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="SpringBootDemo" target="1.8" />
       <module name="SpringSession" target="1.8" />
+      <module name="SpringSessionTest" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
