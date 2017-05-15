@@ -15,20 +15,27 @@
     </wildcardResourcePatterns>
     <annotationProcessing>
       <profile default="true" name="Default" enabled="false">
-        <processorPath useClasspath="true" />
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/SpringBootJwt" />
+        </processorPath>
       </profile>
       <profile default="false" name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
+        <processorPath useClasspath="true">
+          <entry name="$PROJECT_DIR$/SpringBootJwt/src/main/resources/config/Audience.properties" />
+        </processorPath>
         <module name="SpringBootDemo" />
+        <module name="SpringBootJwt" />
         <module name="SpringSession" />
         <module name="SpringSessionTest" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="SpringBootDemo" target="1.8" />
+      <module name="SpringBootJwt" target="1.8" />
+      <module name="SpringBootProperties" target="1.8" />
       <module name="SpringSession" target="1.8" />
       <module name="SpringSessionTest" target="1.8" />
     </bytecodeTargetLevel>
