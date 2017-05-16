@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,8 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootApplication
-//@EnableConfigurationProperties(Audience.class)
-@ConfigurationProperties(prefix = "audience")
+//@ConfigurationProperties()
 @RestController
 public class SpringBootJwtApplication {
 
@@ -40,10 +40,18 @@ public class SpringBootJwtApplication {
     @Value("${audience.age}")
     String age;
 
+	@Autowired
+	Audience audience;
+
     @RequestMapping("/api/audience")
     String audience(){
         return name + " is " + age + " now!";
     }
+
+	@RequestMapping("/api/prefix")
+	String prefix(){
+		return audience.getName() + " is " + audience.getAge() + " now!";
+	}
 
 
 }
