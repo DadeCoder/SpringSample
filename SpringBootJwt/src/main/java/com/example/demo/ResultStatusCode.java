@@ -6,7 +6,11 @@ package com.example.demo;
 public enum ResultStatusCode {
     OK(0, "OK"),
     SYSTEM_ERR(30001, "System error"),
-    PERMISSION_DENIED(40001,"PERMISSION_DENIED")
+    PERMISSION_DENIED(40001,"PERMISSION_DENIED"),
+    INVALID_CLIENTID(30003, "Invalid clientid"),
+    INVALID_PASSWORD(30004, "User name or password is incorrect"),
+    INVALID_CAPTCHA(30005, "Invalid captcha or captcha overdue"),
+    INVALID_TOKEN(30006, "Invalid token")
 
 
 

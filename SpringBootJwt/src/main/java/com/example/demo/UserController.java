@@ -17,6 +17,15 @@ public class UserController {
     @Autowired
     private UserInfoRepository userRepositoy;
 
+    @Autowired
+    private Audience audience;
+
+    @RequestMapping("/getaudience")
+	public Object getAudience() {
+		ResultMsg resultMsg = new ResultMsg(ResultStatusCode.OK.getErrcode(), ResultStatusCode.OK.getErrmsg(), audience);
+		return resultMsg;
+	}
+
     @RequestMapping("getuser")
     public Object getUser(int id)
     {
@@ -64,4 +73,10 @@ public class UserController {
         ResultMsg resultMsg = new ResultMsg(ResultStatusCode.OK.getErrcode(), ResultStatusCode.OK.getErrmsg(), null);
         return resultMsg;
     }
+
+    @RequestMapping("/run")
+    String run(){
+        return "running!";
+    }
+
 }
