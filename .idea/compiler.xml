@@ -28,6 +28,7 @@
         </processorPath>
         <module name="SpringBootDemo" />
         <module name="SpringBootJwt" />
+        <module name="SpringBootNetty" />
         <module name="SpringSession" />
         <module name="SpringSessionTest" />
       </profile>
@@ -35,6 +36,7 @@
     <bytecodeTargetLevel>
       <module name="SpringBootDemo" target="1.8" />
       <module name="SpringBootJwt" target="1.8" />
+      <module name="SpringBootNetty" target="1.8" />
       <module name="SpringBootProperties" target="1.8" />
       <module name="SpringSession" target="1.8" />
       <module name="SpringSessionTest" target="1.8" />
